@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Id Servico</th>
+      <th scope="col">Serviço</th>
+      <th scope="col">Preço</th>
+      <th scope="col">Data cadastro</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>{% for services in services %}
+			<td>{{ services.id_servicos}}</td>
+			<td>{{ services.nome_servico}}</td>
+			<td>{{ services.preco_servico}}</td>
+			<td>{{ services.data_cadastro_dt}}</td>
+    </tr>{% endfor %}
+    <tr>
+  </tbody>
+</table>
+
+	<ul>
+
+	<ul>
+	<br>
+	<a href="{% url 'persons_new' %}"> Novo Cliente</a>
+</body>
+</html>
+
+
+
+
+

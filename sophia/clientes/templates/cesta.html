@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Contranto</th>
+      <th scope="col">Servico</th>
+      <th scope="col">Cliente</th>
+      <th scope="col">Inicio contrato</th>
+      <th scope="col">Fim contrato</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>{% for cesta in cestas %}
+			<td>{{ cesta.id_cli_serv}}</td>
+			<td>{{ cesta.id_servico}}</td>
+			<td>{{ cesta.id_cliente}}</td>
+			<td>{{ cesta.inicio_contrato}}</td>
+			<td>{{ cesta.fim_contrato}}</td>
+    </tr>{% endfor %}
+    <tr>
+  </tbody>
+</table>
+
+	<ul>
+
+	<ul>
+	<br>
+	<a href="{% url 'persons_new' %}"> Novo Cliente</a>
+</body>
+</html>
+
+
